@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
-	"rsc.io/quote/v4"
+	"github.com/marcelo-sjr/Go-Tutorials/greetings"
 )
 
 func main(){
 
-	fmt.Println(quote.Hello())
+	name := "Alex"
+	fmt.Println(greetings.Hello(name))
 }
