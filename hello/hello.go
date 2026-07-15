@@ -2,11 +2,17 @@ package main
 
 import (
 	"fmt"
+	"log"
+
 	"github.com/marcelo-sjr/Go-Tutorials/greetings"
 )
 
-func main(){
+func main() {
 
 	name := "Alex"
-	fmt.Println(greetings.Hello(name))
+	message, err := greetings.Hello(name)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(message)
 }
