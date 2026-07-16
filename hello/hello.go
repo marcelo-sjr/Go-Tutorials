@@ -2,9 +2,7 @@ package main
 
 import (
 	"fmt"
-	_ "fmt"
 	"log"
-	_ "log"
 
 	"github.com/marcelo-sjr/Go-Tutorials/greetings"
 )
