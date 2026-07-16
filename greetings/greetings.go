@@ -14,11 +14,11 @@ func Hello(name string) (string, error) {
 	return message, nil
 }
 
-func Hellos(names []string) (map[string]string, error){
+func Hellos(names []string) (map[string]string, error) {
 	messages := make(map[string]string)
-	for _, name := range names{
+	for _, name := range names {
 		message, err := Hello(name)
-		if err != nil{
+		if err != nil {
 			return nil, err
 		}
 		messages[name] = message
@@ -26,12 +26,12 @@ func Hellos(names []string) (map[string]string, error){
 	return messages, nil
 }
 
-//starting functions with lowercase turns it into a non exported func(not visible outside package)
+// starting functions with lowercase turns it into a non exported func(not visible outside package)
 func randomFormat() string {
 	possibleGreetings := []string{
 		"Hi, %v. Welcome!",
-        "Great to see you, %v!",
-        "Hail, %v! Well met!",
+		"Great to see you, %v!",
+		"Hail, %v! Well met!",
 		"Hey, %v! Nice to see you!",
 		"Welcome, %v!",
 		"Greetings, %v!",
