@@ -25,12 +25,14 @@ func main() {
 		"Emma",
 	}
 
-	messages,err := greetings.Hellos(names)
-	if err != nil{
+	messages, err := greetings.Hellos(names)
+	if err != nil {
 		log.Fatal(err)
 	}
-	
-	for _,message := range messages{
+
+	//'message' local to this for loop, so it shadows the previous
+	//'message' variable without a redefinition error
+	for _, message := range messages {
 		fmt.Println(message)
 	}
 }
