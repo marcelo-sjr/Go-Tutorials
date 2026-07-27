@@ -7,7 +7,8 @@ import (
 	"os"
 	"strings"
 
-	"example/note"
+	"example/notes/note"
+	"example/notes/todo"
 )
 
 func getUserInput(r *bufio.Reader) (string, error) {
@@ -47,5 +48,11 @@ func main() {
 		log.Printf("Error: %v", err)
 	}
 
-	fmt.Println("Note saved!")
+	fmt.Println("note saved.")
+
+	test := todo.Todo{
+		Text: "test",
+	}
+
+	test.Print()
 }

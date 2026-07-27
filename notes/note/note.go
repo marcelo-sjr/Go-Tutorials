@@ -37,3 +37,8 @@ func (n Note) SaveJSON() error {
 
 	return os.WriteFile(title, data, 0644)
 }
+
+func (n Note) Print() {
+	str:= fmt.Sprintf("Title: %s\nContent: %s\nCreated at: %s\n", n.Title, n.Content, n.CreatedAt)
+	fmt.Print(str)
+}
