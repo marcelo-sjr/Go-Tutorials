@@ -107,7 +107,7 @@ This project is licensed under the MIT License.
 - [x] Packages
 - [x] Modules
 - [x] Functions
-- [ ] Structs
+- [x] Structs
 - [ ] Interfaces
 - [ ] Goroutines
 - [ ] Channels
