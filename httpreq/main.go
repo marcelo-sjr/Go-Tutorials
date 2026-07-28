@@ -18,19 +18,17 @@ type ApiResponse struct {
 func main(){
 	req, err := http.Get("http://localhost:8080/estatistica")
 	if err != nil{
-		log.Printf("Error: %v", err)
+		log.Fatalf("Error: %v", err)
 	}
 
-	if req != nil{
-		defer req.Body.Close()
-		response := ApiResponse{}
-		/*res, _ := io.ReadAll(req.Body)
-		err = json.Unmarshal(res, &response)*/
+	defer req.Body.Close()
+	response := ApiResponse{}
+	/*res, _ := io.ReadAll(req.Body)
+	err = json.Unmarshal(res, &response)*/
 
-		err = json.NewDecoder(req.Body).Decode(&response)
-			if err != nil{
-			log.Printf("Error %v", err)
-		}
-		fmt.Printf("%#v", response)
+	err = json.NewDecoder(req.Body).Decode(&response)
+		if err != nil{
+		log.Fatalf("Error %v", err)
 	}
+	fmt.Printf("%#v", response)	
 }
